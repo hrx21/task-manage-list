@@ -4,6 +4,10 @@
 
 This documentation provides detailed information about the components used in the project: **Button**, **Modal**, **Table**, **Sidebar**, and **Footer**. These components are utilized to build the **TaskList** feature of the application.
 
+## How to run
+
+After cloning this repository in your terminal type npm run dev and in your browser paste this localhost:3000
+
 ## 1. Button Component
 
 ### Usage
