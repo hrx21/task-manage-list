@@ -1,0 +1,306 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --variable: 1rem;
+  --primary: #2956A8;
+  --gray: #E6E3E1;
+  --yellow: #F8D881;
+  --secondary: #6EC9F1;
+  --black: #231F20;
+  --lightYellow: #FCECC0;
+  --borderGray: #D7D6D6;
+  --lightBlue: #DCE6F7;
+  --success: #CFF4E7;
+  --compBlue: #80CAFF;
+  --compPurple: #D9B8FF;
+  --compRed: #FFAFA3;
+  --compGreen: #85E0A3;
+  --darkerPrimary: #012551;
+  --freelancer-bg: #F0F0F0;
+}
+
+html,
+body {
+  font-size: 62.5%;
+}
+
+/* Light (Weight 300) */
+@font-face {
+  font-family: "League Spartan";
+  src: url("../public/fonts/leagueSpartan/LeagueSpartan-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Regular (Weight 400) */
+@font-face {
+  font-family: "League Spartan";
+  src: url("../public/fonts/leagueSpartan/LeagueSpartan-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Medium (Weight 500) */
+@font-face {
+  font-family: "League Spartan";
+  src: url("../public/fonts/leagueSpartan/LeagueSpartan-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Semi-Bold (Weight 600) */
+@font-face {
+  font-family: "League Spartan";
+  src: url("../public/fonts/leagueSpartan/LeagueSpartan-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Bold (Weight 700) */
+@font-face {
+  font-family: "League Spartan";
+  src: url("../public/fonts/leagueSpartan/LeagueSpartan-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Extra-Bold (Weight 800) */
+@font-face {
+  font-family: "League Spartan";
+  src: url("../public/fonts/leagueSpartan/LeagueSpartan-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Black (Weight 900) */
+@font-face {
+  font-family: "League Spartan";
+  src: url("../public/fonts/leagueSpartan/LeagueSpartan-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Finger Paint";
+  src: url("../public/fonts/fingerPaint/FingerPaint-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Finger Paint";
+  src: url("../public/fonts/fingerPaint/FingerPaint-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Noto Sans */
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../public/fonts/notoSans/static/NotoSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../public/fonts/notoSans/static/NotoSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Medium (Weight 500) */
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../public/fonts/notoSans/static/NotoSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Semi-Bold (Weight 600) */
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../public/fonts/notoSans/static/NotoSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Bold (Weight 700) */
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../public/fonts/notoSans/static/NotoSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Extra-Bold (Weight 800) */
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../public/fonts/notoSans/static/NotoSans-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Black (Weight 900) */
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../public/fonts/notoSans/static/NotoSans-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Light (Weight 300) */
+.spartan-300 {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 300;
+}
+
+/* Regular (Weight 400) */
+.spartan-400 {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 400;
+}
+
+.paint-400 {
+  font-family: "Finger Paint", sans-serif;
+  font-weight: 400;
+}
+
+.paint-400 {
+  font-family: "Finger Paint", sans-serif;
+  font-weight: 400;
+}
+
+/* Medium (Weight 500) */
+.spartan-500 {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 500;
+}
+
+/* Semi-Bold (Weight 600) */
+.spartan-600 {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 600;
+}
+
+/* Bold (Weight 700) */
+.spartan-700 {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+}
+
+/* Extra-Bold (Weight 800) */
+.spartan-800 {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 800;
+}
+
+/* Black (Weight 900) */
+.spartan-900 {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 900;
+}
+
+/* notosans */
+
+.notosans-300 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 300;
+}
+
+/* Regular (Weight 400) */
+.notosans-400 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+}
+
+/* Medium (Weight 500) */
+.notosans-500 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 500;
+}
+
+/* Semi-Bold (Weight 600) */
+.notosans-600 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
+}
+
+/* Bold (Weight 700) */
+.notosans-700 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+}
+
+/* Extra-Bold (Weight 800) */
+.notosans-800 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 800;
+}
+
+/* Black (Weight 900) */
+.notosans-900 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 900;
+}
+
+.container {
+  /* margin: auto; */
+  width: 90% !important;
+  display: flex;
+  margin: 0 auto;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.contained-container {
+  width: 100%;
+}
+
+@media screen and (max-width:768px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+body {
+  background: var(--freelancer-bg);
+}
+
+/* .no-scroll{
+  overflow: hidden;
+} */
+
+.no-scroll {
+  /* Hide the scrollbar but allow scrolling */
+  scrollbar-width: none;
+  /* Firefox */
+
+  &::-webkit-scrollbar {
+    width: 0;
+    /* Chrome, Safari, and Edge */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+    /* Hide scrollbar thumb */
+  }
+}

@@ -1,0 +1,104 @@
+.wholepage {
+  display: flex;
+  // width: 100%;
+  // flex-direction: row;
+  // min-height: 100vh;
+
+  .btnModal {
+    font-size: 2rem;
+    // border: #2956a8 1px solid;
+  }
+
+  @media (max-width: 768px) {
+    top: calc(16rem + 6px);
+    position: relative;
+  }
+}
+
+.wid {
+  display: flex;
+  width: 100vw;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  width: 100%;
+  flex: 1;
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    padding: 1.6rem 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    // .filterDropdown {
+    //   display: block;
+    //   padding: 10px;
+    //   font-size: 16px;
+    //   border-radius: 20rem;
+    //   border: 2px solid var(--borderGray);
+    //   // background-color: var(--compBlue);
+    // }
+
+    .pills {
+      display: flex;
+      flex-direction: column;
+
+      .tabs {
+        display: inline-flex;
+        background-color: #ffffff;
+        border-radius: 2rem;
+        padding: 0.3rem;
+        position: relative;
+        width: fit-content;
+
+        .indicator {
+          position: absolute;
+          height: calc(100% - 1rem);
+          background-color: var(--primary);
+          border-radius: 1.5rem;
+          transition: 0.3s ease;
+          top: 0.5rem;
+          z-index: 0;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+          @media (max-width: 768px) {
+            border-radius: 2.4rem;
+          }
+        }
+
+        .tab {
+          padding: 0.7rem 1.6rem 0.9rem 1.6rem;
+          border: none;
+          background: none;
+          border-radius: 1.3rem;
+          cursor: pointer;
+          font-size: 1.3rem;
+          color: #766d6d;
+          transition: color 0.3s ease;
+          position: relative;
+          text-decoration: none;
+
+          &.active {
+            color: #fff;
+          }
+
+          @media (max-width: 768px) {
+            font-size: 2rem;
+          }
+        }
+
+        @media (max-width: 768px) {
+          border-radius: 2.4rem;
+          padding: 0.75rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,246 @@
+.tableContainer {
+  width: 100%;
+  font-family: Arial, sans-serif;
+  overflow-x: auto;
+  background-color: white;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 20px 0;
+  min-width: 800px;
+}
+
+.table th {
+  padding: 15px;
+  background-color: var(--primary);
+  color: white;
+  text-align: left;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.table td {
+  padding: 15px;
+  background-color: white;
+  border: 1px solid var(--borderGray);
+  color: var(--black);
+  font-size: 16px;
+}
+
+.table tbody tr:nth-child(even) td {
+  background-color: var(--lightBlue);
+}
+
+.table tbody tr:hover {
+  background-color: var(--compBlue);
+}
+
+.priorityLow {
+  color: rgb(113, 170, 113);
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 800;
+}
+
+.priorityMedium {
+  color: #eb9b34;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 800;
+}
+
+.priorityHigh {
+  color: crimson;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 800;
+}
+
+.optionsContainer {
+  position: relative;
+  display: grid;
+}
+
+.optionsButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.popupMenu {
+  position: absolute;
+  top: -50%;
+  left: 60%;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+
+  .edit:hover {
+    background-color: var(--compGreen);
+    color: rgb(101, 93, 93);
+  }
+
+  .del:hover {
+    background-color: var(--compRed);
+    color: rgb(101, 93, 93);
+  }
+
+  button {
+    display: flex;
+    align-items: start;
+    background: none;
+    border: none;
+    padding: 0.7rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: white;
+  margin-top: -20px;
+  min-width: 100%;
+}
+
+.paginationButton {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--primary);
+  background-color: white;
+  color: var(--primary);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover:not(:disabled) {
+    background-color: var(--primary);
+    color: white;
+  }
+
+  &:disabled {
+    border-color: var(--borderGray);
+    color: var(--borderGray);
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+
+  &:active:not(:disabled) {
+    transform: scale(0.98);
+  }
+}
+
+.pageInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--black);
+  font-size: 14px;
+}
+
+.pageNumbers {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pageNumber {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--borderGray);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+
+  &.active {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+  }
+}
+
+.pageSizeSelector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+
+  select {
+    padding: 0.4rem;
+    border: 1px solid var(--borderGray);
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .table {
+    min-width: 100%;
+    font-size: 14px;
+  }
+
+  .table th,
+  .table td {
+    padding: 8px 10px;
+  }
+
+  .pagination {
+    gap: 2rem;
+    padding: 0.5rem;
+    flex-direction: row;
+    justify-content: end;
+  }
+
+  .pageNumbers {
+    order: -1;
+  }
+
+  .pageSizeSelector {
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.loading {
+  padding: 2rem;
+  text-align: center;
+  color: var(--black);
+  font-size: 16px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.emptyMessage {
+  padding: 2rem;
+  text-align: center;
+  color: var(--black);
+  font-size: 16px;
+  background-color: white;
+}

@@ -1,0 +1,302 @@
+.mobileNav {
+  display: none;
+  position: fixed;
+  top: 2rem;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 8rem;
+  z-index: 1000;
+  margin: 2rem;
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logoSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: calc(var(--variable) * 1.3) calc(var(--variable) * 1.7);
+    font-size: 2.5rem;
+
+    img {
+      height: 10rem;
+    }
+  }
+}
+
+.sidebar {
+  position: sticky;
+  top: 1.6rem;
+  height: 100vh;
+  width: 250px;
+  height: 95vh;
+  background-color: white;
+  margin: 1.6rem;
+  border-radius: 1.6rem;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  // z-index: 1000;
+
+  @media (max-width: 768px) {
+    position: fixed;
+    top: 7rem;
+    left: 0;
+    width: calc(100% - 4rem);
+    right: 0;
+    height: max-content;
+    display: flex;
+    transition: display 0.3s ease-in-out;
+    z-index: 999;
+    border-radius: 1rem 1rem 8rem 8rem;
+    margin: 2rem;
+  }
+
+  &.menuOpen {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .upperSection {
+    .logoSection {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: calc(var(--variable) * 1.3) calc(var(--variable) * 1.7);
+      font-size: 2.5rem;
+
+      img {
+        height: 10rem;
+      }
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    .tabs {
+      padding: calc(var(--variable) * 1) calc(var(--variable) * 0.8);
+      display: flex;
+      flex-direction: column;
+      margin-top: 0;
+
+      .sidebarTab,
+      .sidebarTabAss {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: calc(var(--variable) * 1);
+        margin-bottom: 0.2rem;
+        padding: calc(var(--variable) * 1.3) calc(var(--variable) * 1.7);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        img {
+          height: calc(var(--variable) * 2);
+        }
+
+        svg {
+          height: calc(var(--variable) * 2);
+        }
+
+        .open {
+          transform: rotate(45deg);
+        }
+
+        .labelText {
+          font-size: calc(var(--variable) * 1.6);
+          line-height: calc(var(--variable) * 1.8);
+          font-family: "Noto Sans", sans-serif;
+          font-weight: 500;
+        }
+
+        &:hover,
+        &.active {
+          background-color: var(--primary);
+          color: #fff;
+          border-radius: calc(var(--variable) * 0.8);
+          z-index: 1000;
+
+          img {
+            filter: brightness(0) invert(1);
+          }
+
+          svg {
+            color: white;
+          }
+        }
+
+        &.activeTab {
+          background-color: var(--primary);
+          color: white;
+          border-radius: 0.8rem;
+
+          img {
+            filter: brightness(0) invert(1);
+          }
+
+          .labelText {
+            font-weight: bold;
+          }
+        }
+      }
+
+      .sidebarTabAss {
+        justify-content: space-between;
+
+        .assignmentOption {
+          display: flex;
+          flex-direction: row;
+          gap: calc(var(--variable) * 1);
+          align-items: center;
+
+          img {
+            height: calc(var(--variable) * 2);
+          }
+
+          .labelText {
+            font-size: calc(var(--variable) * 1.6);
+            line-height: calc(var(--variable) * 1.8);
+          }
+        }
+      }
+
+      .assignmentStatus {
+        display: flex;
+        flex-direction: column;
+        padding: calc(var(--variable) * 0.5) calc(var(--variable) * 0.8);
+        margin: 1rem 0;
+
+        .opt {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: calc(var(--variable) * 1);
+          padding: 0 calc(var(--variable) * 1.6);
+          cursor: pointer;
+
+          .dot {
+            display: block;
+            border-radius: 50%;
+            padding: 4px;
+            height: 4px;
+            width: 4px;
+            background-color: #d8dbe4;
+            transition: background-color 0.3s ease;
+
+            &.active {
+              background-color: var(--primary);
+            }
+          }
+
+          .optText {
+            font-size: calc(var(--variable) * 1.6);
+            line-height: calc(var(--variable) * 1.8);
+            transition: color 0.3s ease;
+            font-family: "Noto Sans", sans-serif;
+            font-weight: 500;
+
+            &.activeText {
+              color: var(--primary);
+              font-weight: 600;
+            }
+          }
+        }
+
+        .lines {
+          display: block;
+          height: 3rem;
+          width: 1.5px;
+          margin: 0 calc(1.5rem + 4px);
+          cursor: pointer;
+          background-color: #d8dbe4;
+        }
+      }
+
+      @media (max-width: 768px) {
+        padding-top: 9rem;
+      }
+    }
+  }
+
+  .profileLogOut {
+    padding: calc(var(--variable) * 1.6);
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .profileDetails {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: calc(var(--variable) * 0.8);
+      flex-wrap: wrap;
+
+      .profileImage {
+        background-color: #f3be2e;
+        border-radius: 50%;
+        padding: calc(var(--variable) * 0.4);
+      }
+
+      .profileContent {
+        .userName {
+          font-size: calc(var(--variable) * 1.6);
+          line-height: calc(var(--variable) * 1.9);
+        }
+
+        .userEmail {
+          font-size: calc(var(--variable) * 1.2);
+          line-height: calc(var(--variable) * 1.6);
+        }
+      }
+    }
+
+    @media (max-width: 1049px) {
+      padding: 3rem;
+    }
+  }
+}
+
+.menuToggle {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+
+  .hamburgerLine {
+    display: block;
+    width: 17px;
+    height: 1px;
+    background-color: #000;
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &.close {
+    .hamburgerLine {
+      &:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: translateY(-5px) rotate(-45deg);
+      }
+    }
+  }
+}

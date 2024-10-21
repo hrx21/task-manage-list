@@ -1,0 +1,132 @@
+.taskListContainer {
+  width: 100%;
+  font-family: Arial, sans-serif;
+  overflow-x: auto;
+  background-color: var(--freelancer-bg);
+  border-radius: 8px;
+}
+
+.taskTable {
+  //   width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  min-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+/* styles/TaskList.module.css */
+.taskTable th {
+  padding: 15px;
+  background-color: var(--primary);
+  color: white;
+  text-align: left;
+  font-weight: bold;
+  font-size: 18px; /* Increased font size for table headers */
+}
+
+.taskTable td {
+  padding: 15px;
+  background-color: white;
+  border: 1px solid var(--borderGray);
+  color: var(--black);
+  font-size: 16px; /* Increased font size for table data */
+}
+
+.taskTable tbody tr:nth-child(even) td {
+  background-color: var(--lightBlue);
+}
+
+.taskTable tbody tr:hover {
+  background-color: var(--compBlue);
+}
+
+.priority-low {
+  background-color: var(--compGreen);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.priority-medium {
+  background-color: var(--yellow);
+  color: black;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.priority-high {
+  background-color: var(--compRed);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .taskTable {
+    min-width: 100%;
+    font-size: 14px;
+  }
+
+  .taskTable th,
+  .taskTable td {
+    padding: 8px 10px;
+  }
+}
+
+.taskTable {
+  width: 100%;
+  border-collapse: collapse;
+  // Add other styling as needed
+}
+
+.optionsContainer {
+  position: relative;
+  display: grid;
+}
+
+.optionsButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.popupMenu {
+  position: absolute;
+  top: -50%;
+  left: 60%;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+
+  .edit:hover {
+    background-color: var(--compGreen);
+
+    color: rgb(101, 93, 93);
+  }
+
+  .del:hover {
+    background-color: var(--compRed);
+    color: rgb(101, 93, 93);
+  }
+
+  button {
+    display: flex;
+    align-items: start;
+    background: none;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+}
